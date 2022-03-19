@@ -1,0 +1,14 @@
+kind: Service
+apiVersion: v1
+metadata:
+  name: telegrambot-service
+  labels:
+    app: telegrambot
+spec:
+  selector:
+    app: telegrambot
+  ports:
+  - protocol: TCP
+    port: 8080
+    targetPort: 4567
+  type: NodePort
